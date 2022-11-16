@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function user(){
+			var userName=document.getElementById("username").value
+			/*var textData=document.getElementsByClassName("para")
+			console.log(textData.length)
+			for(var i=0;i<textData.length;i++){
+				console.log(textData[i].innerHTML)
+			}
+			var listOfUl=document.getElementsByTagName("li")
+			for(var d=0;d<listOfUl.length;d++){
+				console.log(listOfUl[d].innerHTML)
+			}*/
+			document.getElementById("haminiNaidu").innerHTML=userName
+		}
+	</script>
+</head>
+<body>
+	<input id="username"/>
+	<h1>Name is:<span id="haminiNaidu">I am unique</span></h1>
+	<!-- <p class="para">whats going on here</p>
+	<p class="para">java script topic</p>
+	<h1 class="para">now topic is elements</h1>
+	<ul>
+		<li>one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+		<li>five</li>
+	</ul>  -->
+	<button onclick="user()">submit</button>
+
+</body>
+</html>
