@@ -6,9 +6,9 @@
 	<title></title>
 </head>
 <body>
-	<section id="emp" style="display: flex;">
+	<!-- <section id="emp" style="display: flex;">
 		
-	</section>
+	</section> -->
 	<script type="text/javascript">
 		/*const PromiseObj= new Promise((resolve,reject)=>{
 			var time=Math.random();
@@ -23,7 +23,7 @@
 		})
 		console.log(PromiseObj)
 		console.log("hello")*/
-		fetch("https://reqres.in/api/users?page=2")
+		/*fetch("https://reqres.in/api/users?page=2")
 		.then((res)=>{
 			//console.log(res)
 			return res.json()
@@ -46,9 +46,32 @@
 				</div>`
 				//console.log(employees[i].first_name)
 			}
+		}*/
+		
+		function user(){
+			var username=document.getElementById("username").value,
+			number=document.getElementById("number").value;
+			console.log(username,number);
+			fetch("https://reqres.in/api/users",{
+			method:"POST",
+			headers:{
+				"Content-Type":"application/json"},
+				body:JSON.stringify({name:username,mobile:number})
+		})
+		.then((res)=>{
+			console.log(res)
+			return res.json()
+		})
+		.then((f)=>{
+			console.log(f)
+		})
 		}
 		
 	</script>
-
+	<div>
+		<p><input id="username" placeholder="Enter your name"/></p>
+		<p><input id="number" placeholder="Enter your mobile number"/></p>
+		<P><button onclick="user()">Submit</button></P>
+	</div>
 </body>
 </html>
